@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AppHomeComponent } from './components/app-home';
 import { TimelineComponent } from './components/timeline';
+import { TimelineEventComponent } from './components/timeline-event';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { TimelineComponent } from './components/timeline';
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' }
   ],
-  declarations: [ AppComponent, AppHomeComponent, TimelineComponent ],
+  declarations: [ AppComponent, AppHomeComponent, TimelineComponent, TimelineEventComponent ],
   exports: [ AppComponent ]
 })
 export class AppModule {}
