@@ -3,4 +3,5 @@ dist/
 .DS_Store
 npm-debug.log
 src/ngfactory
+public/images/mew
 coverage/
