@@ -8,10 +8,11 @@
         </h2>
       </div>
       <div class="timeline-centered">
-        <sm-timeline-event [bgColor]="'black'" [timelineEvent]="{date: '2017-01-04'}"></sm-timeline-event>
+        <sm-timeline-event *ngFor="let event of events; let odd=odd; let even=even;" [bgColor]="'black'" [direction]="odd ? 'left' : ''" [timelineEvent]="event"></sm-timeline-event>
+        <!--<sm-timeline-event [bgColor]="'black'" [timelineEvent]="{date: '2017-01-04'}"></sm-timeline-event>
         <sm-timeline-event [bgColor]="'black'" [timelineEvent]="{date: '2016-03-07', direction: 'left'}"></sm-timeline-event>
         <sm-timeline-event [bgColor]="'black'" [timelineEvent]="{date: '2015-08-19', image: 'a'}"></sm-timeline-event>
-        <sm-timeline-event [bgColor]="'black'" [timelineEvent]="{date: '2014-11-05', direction: 'left'}"></sm-timeline-event>
+        <sm-timeline-event [bgColor]="'black'" [timelineEvent]="{date: '2014-11-05', direction: 'left'}"></sm-timeline-event>-->
       </div>
     </div>
   </section>
