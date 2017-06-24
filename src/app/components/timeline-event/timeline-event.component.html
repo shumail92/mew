@@ -1,16 +1,19 @@
-<article class="timeline-entry " [class.left-aligned]="timelineEvent.direction == 'left'">
-    <div class="timeline-entry-inner">
+<article class="timeline-entry " [class.left-aligned]="direction == 'left'">
+  <div class="timeline-entry-inner">
     <time class="timeline-time">{{ timelineEvent.date | date:'dd-MM-y' }}</time>
-        <div class="timeline-icon" [ngClass]="'bg-' + bgColor">
-            <div class="date-info">
-                <div class="date-info-date">{{ timelineEvent.date | date:'dd' }}</div>
-                <div class="date-info-month">{{ timelineEvent.date | date:'MMM ' | uppercase }}</div>
-            </div>
-        </div>
-        <div class="timeline-label">
-            <div class="timeline-label-title">Jon Doe chnaged his Profile Picture</div>
-            <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
-            <img *ngIf="timelineEvent.image" src="http://themes.laborator.co/neon/assets/images/timeline-image-3.png" class="img-responsive img-rounded full-width">
+    <div class="timeline-icon" [ngClass]="'bg-' + bgColor">
+        <div class="date-info">
+          <div class="date-info-date">{{ timelineEvent.date | date:'dd' }}</div>
+          <div class="date-info-month">{{ timelineEvent.date | date:'MMM ' | uppercase }}</div>
         </div>
     </div>
+    <div class="timeline-label">
+        <div class="timeline-label-title">{{timelineEvent.title}}</div>
+        <!--<p *ngIf="timelineEvent.description">{{timelineEvent.description}}</p>-->
+        <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+        <div class="event-img__thumbnails" *ngIf="timelineEvent.images">
+          <div *ngFor="let img of timelineEvent.images" class="event-img__thumbnail" [ngStyle]="{'background-image': 'url(' + 'images/mew/' + img + ')'}"></div>
+        </div>
+    </div>
+  </div>
 </article>
