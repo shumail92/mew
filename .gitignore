@@ -4,4 +4,5 @@ dist/
 npm-debug.log
 src/ngfactory
 public/images/mew
+src/app/services/event-mock.ts
 coverage/
