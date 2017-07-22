@@ -1,4 +1,12 @@
-export class Event {
+export interface IEvent {
+  id: number;
+  title: string;
+  description: string;
+  date: Date;
+  images?: string[];
+};
+
+export class Event implements IEvent {
   id: number;
   title: string;
   description: string;
